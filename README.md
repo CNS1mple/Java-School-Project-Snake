@@ -20,4 +20,4 @@
 
 **蛇头形状，计分功能，排行榜，死亡之后**  
 
-**Snakehead shape, Scoring function, leaderboard, afte-death**  
+**Snakehead shape, Scoring function, leaderboard, after-death**  
