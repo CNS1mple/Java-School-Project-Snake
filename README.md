@@ -16,3 +16,8 @@
 
 **随着长度的增加，速度会变快，障碍物也会增多**  
 
+## 后续版本 Unfinished work
+
+**蛇头形状，计分功能，排行榜，死亡之后**  
+
+**Snakehead shape, Scoring function, leaderboard, afte-death**  
