@@ -1,8 +1,11 @@
   
 **A java school game project named Snake :D**  
 
-**一个java小项目————贪吃蛇:D**
-![Image text](http://oyku9aqxp.bkt.clouddn.com/snake2.gif)  
+**一个java小项目————贪吃蛇:D**  
+  
+  
+![Image text](http://oyku9aqxp.bkt.clouddn.com/snake2.gif)    
+
 
 ## 玩法 How to play
 
