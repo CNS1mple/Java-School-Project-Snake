@@ -11,7 +11,8 @@ a java school project (game)
 
 **use up, down, left, right to controll the snake. Do not eat the rock or yourself!!**  
 
-**用上下左右键控制蛇的走位，不要吃石头或者你自己的身体!!
+**用上下左右键控制蛇的走位，不要吃石头或者你自己的身体!!**  
+
 
 ## 难度 Difficulty  
 
