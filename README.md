@@ -5,7 +5,7 @@
 
 ## 玩法 How to play
 
-**use up, down, left, right to controll the snake. Do not eat the rock or yourself!!**  
+**Use up, down, left, right to controll the snake. Do not eat the rock or yourself!!**  
 
 **用上下左右键控制蛇的走位，不要吃石头或者你自己的身体!!**  
 
