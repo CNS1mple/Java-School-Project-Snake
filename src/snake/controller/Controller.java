@@ -7,6 +7,7 @@ import snake.entities.Food;
 import snake.entities.Ground;
 import snake.entities.Snake;
 import snake.listener.SnakeListener;
+import snake.util.Global;
 import snake.view.GamePanel;
 
 
@@ -56,7 +57,12 @@ public class Controller extends KeyAdapter implements SnakeListener{
 		}
 		if(food.isSnakeEatFood(snake)){
 			snake.eatFood();
+			snake.win = snake.win + 1;
+			System.out.println(snake.win);
+			
+			Global.SPEED -= Global.SPEED_ADD;
 			ground.newGround(ground.getPoint());
+//			ground.newGround(ground.getPoint());
 			food.newFood(ground.getPoint());
 		}
 		gamePanel.display(snake, food, ground);

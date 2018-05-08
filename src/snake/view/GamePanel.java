@@ -2,6 +2,7 @@ package snake.view;
 
 import java.awt.Graphics;
 
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 import snake.entities.Food;
@@ -15,7 +16,6 @@ public class GamePanel extends JPanel{
 	private Snake snake;
 	private Food food;
 	private Ground ground;
-	
 	public void display(Snake snake, Food food, Ground ground){
 		System.out.println("GamePanel's display");
 		this.snake = snake;
@@ -30,7 +30,7 @@ public class GamePanel extends JPanel{
 		//÷ÿ–¬œ‘ æ
 		g.setColor(Global.GAME_PANEL_COLOR);
 		g.fillRect(0, 0, Global.WIDTH * Global.CELL_SIZE,
-				Global.HEIGHT * Global.CELL_SIZE);
+				Global.HEIGHT * Global.CELL_SIZE + 50);
 		
 		if(ground != null && snake != null && food != null){
 			this.ground.drawMe(g);
@@ -38,6 +38,4 @@ public class GamePanel extends JPanel{
 			this.food.drawMe(g);
 		}
 	}
-	
-	
 }

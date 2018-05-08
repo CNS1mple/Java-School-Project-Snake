@@ -6,6 +6,10 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
+
 import snake.listener.SnakeListener;
 import snake.util.Global;
 
@@ -17,9 +21,12 @@ public class Snake {
 	public static final int LEFT = 2;
 	public static final int RIGHT = -2;
 	
+	public int win = 0;
+	public int MaxScore = 18;
+	public String score;
 	private int oldDirection, newDirection;
 	
-	private boolean life;;
+	public boolean life;;
 	
 	private Point oldTail;
 	
@@ -87,6 +94,11 @@ public class Snake {
 	
 	public void die(){
 		life = false;
+		JFrame finish = new JFrame();
+		MaxScore = win > MaxScore ? win : MaxScore;
+		JOptionPane.showMessageDialog(finish, "得分是：" + String.valueOf(win)+ "\n当前最高记录为：" + String.valueOf(MaxScore));
+		finish.setVisible(true);
+		finish.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	public Point getHead(){
 		return body.getFirst();
@@ -99,7 +111,6 @@ public class Snake {
 	
 	public void eatFood(){
 		System.out.println("Snake's eatFood");
-		Global.SPEED -= 10;
 		body.addLast(oldTail);
 	}
 	
@@ -118,7 +129,7 @@ public class Snake {
 		System.out.println("Snake's drawMe");
 		g.setColor(Global.SNAKE_COLOR);
 		for(Point p : body){
-			g.fill3DRect(p.x * Global.CELL_SIZE, p.y * Global.CELL_SIZE, 
+			g.fill3DRect((p.x) * Global.CELL_SIZE, p.y * Global.CELL_SIZE, 
 					Global.CELL_SIZE, Global.CELL_SIZE, true);
 		}
 	}

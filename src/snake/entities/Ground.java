@@ -15,7 +15,11 @@ public class Ground extends Point{
 		for(int x = 0; x < Global.WIDTH; x++){
 			rocks[x][0] = 1;
 			rocks[x][Global.HEIGHT - 1] = 1;
-		}	
+		}
+		for(int y = 0; y < Global.HEIGHT; y++){
+			rocks[0][y] = 1;
+			rocks[Global.WIDTH - 1][y] = 1;
+		}
 	}
 	public void newGround(Point p){
 		rocks[p.x][p.y] = 1;
