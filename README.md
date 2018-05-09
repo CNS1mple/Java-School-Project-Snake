@@ -7,11 +7,11 @@
 ============================================================================
 
 
-<img src = "{{ 'http://oyku9aqxp.bkt.clouddn.com/snake2.gif' | prepend:site.baseurl}} " width="777" />  
   
-  
+![title](http://oyku9aqxp.bkt.clouddn.com/snake2.gif)  
 
-<img src = "{{ 'http://oyku9aqxp.bkt.clouddn.com/version3.gif' | prepend:site.baseurl}} " width="777" />
+
+![title](http://oyku9aqxp.bkt.clouddn.com/version3.gif)    
 
 
 ## 玩法 How to play 
