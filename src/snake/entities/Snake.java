@@ -1,5 +1,6 @@
 package snake.entities;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.util.HashSet;
@@ -8,7 +9,6 @@ import java.util.Set;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
 
 import snake.listener.SnakeListener;
 import snake.util.Global;
@@ -26,6 +26,7 @@ public class Snake {
 	public String score;
 	private int oldDirection, newDirection;
 	
+	boolean suspend = false;
 	public boolean life;;
 	
 	private Point oldTail;
@@ -39,6 +40,9 @@ public class Snake {
 		init();
 	}
 	public void init(){
+		Global.SPEED = 200;
+		body.clear();
+		win = 0;
 		int x = Global.WIDTH / 2;
 		int y = Global.HEIGHT / 2;
 		for(int i = 0; i < 3; i++){
@@ -133,17 +137,27 @@ public class Snake {
 					Global.CELL_SIZE, Global.CELL_SIZE, true);
 		}
 	}
-	
+	public void initSnake(){
+		Global.SNAKE_COLOR = new Color(0xCD2626);
+	}
 	private class SnakeDiver implements Runnable{//不停调用move方法的线程
 		
 		public void run(){
 			while(life){
+				int cnt = 0;
 				move();
 				for(SnakeListener l : listeners){
 					l.snakeMoved(Snake.this);
 				}
 				try{
 					Thread.sleep(Global.SPEED);
+					cnt = cnt + 1;
+					 synchronized(this) {
+		                    while(suspend){
+		                        Thread.sleep(100);
+		                        System.out.println("resumed");
+		                    }
+		                }
 				}catch (InterruptedException e){
 					e.printStackTrace();
 				}
@@ -151,12 +165,42 @@ public class Snake {
 		}
 	}
 	
+	public void pause(){
+		suspend = !suspend;
+	}
 	public void start(){//启动这个线程的方法
 		new Thread(new SnakeDiver()).start();
+	}
+	public void removeFood(){
+		body.remove(body.getLast());
 	}
 	public void addSnakeListener(SnakeListener l){
 		if(l != null){
 			this.listeners.add(l);
 		}
+	}
+	public void reborn() {
+		// TODO Auto-generated method stub
+		System.out.println("TRY TO REBORN");
+		initSnake();
+		start();
+		init();
+		life = true;
+	}
+	public void changeColor(int i) {
+		// TODO Auto-generated method stub
+		switch(i){
+		case 1:
+			Global.SNAKE_COLOR = new Color(0x66ccff);
+			break;
+		case 2:
+			Global.SNAKE_COLOR = new Color(0x333399);
+			break;
+		case 3:
+			Global.SNAKE_COLOR = new Color(0x24998d);
+			break;
+		}
+			
+		
 	}
 }

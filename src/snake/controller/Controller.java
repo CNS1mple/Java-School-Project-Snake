@@ -17,7 +17,7 @@ public class Controller extends KeyAdapter implements SnakeListener{
 	private Food food;
 	private Ground ground;
 	private GamePanel gamePanel;
-	
+	boolean isPause = false;
 	
 	public Controller(Snake snake, Food food, Ground ground, GamePanel gamePanel) {
 		super();
@@ -42,10 +42,38 @@ public class Controller extends KeyAdapter implements SnakeListener{
 		case KeyEvent.VK_RIGHT:
 			snake.changeDirection(Snake.RIGHT);
 			break;
-			
+		case KeyEvent.VK_SPACE:
+			snake.pause();
+			break;
+		case KeyEvent.VK_ENTER:
+			snake.reborn();
+			System.out.println("reborn");
+			break;
+		case KeyEvent.VK_PAGE_UP:
+			Global.SPEED = Global.SPEED - 20;
+			break;
+		case KeyEvent.VK_PAGE_DOWN:
+			Global.SPEED = Global.SPEED - 20;
+			break;
+		case KeyEvent.VK_INSERT:
+			snake.eatFood();
+			break;
+		case KeyEvent.VK_DELETE:
+			snake.removeFood();
+			break;
+		case KeyEvent.VK_1:
+			snake.changeColor(1);
+			break;
+		case KeyEvent.VK_2:
+			snake.changeColor(2);
+			break;
+		case KeyEvent.VK_3:
+			snake.changeColor(3);
+			break;
 		}
-	}
-	
+		
+			
+}
 	@Override
 	public void snakeMoved(Snake snake) {
 		
