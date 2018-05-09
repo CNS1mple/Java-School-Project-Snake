@@ -4,7 +4,7 @@
 **一个java小项目————贪吃蛇:D**  
   
   
-================================================================================================  
+============================================================================
 
 
 <img src = "{{ 'http://oyku9aqxp.bkt.clouddn.com/snake2.gif' | prepend:site.baseurl}} " width="777" />  
@@ -14,7 +14,7 @@
 <img src = "{{ 'http://oyku9aqxp.bkt.clouddn.com/version3.gif' | prepend:site.baseurl}} " width="777" />
 
 
-## 玩法 How to play {#htp}
+## 玩法 How to play 
  
 
 **Use up, down, left, right to controll the snake. Do not eat the rock or yourself!!**  
@@ -22,7 +22,7 @@
 **用上下左右键控制蛇的走位，不要吃石头或者你自己的身体!!**  
 
 ----------------------
-## 难度 Difficulty  {#def}
+## 难度 Difficulty  
   
 
 **After eating food, snakes will move faster and obstacles will increase**  
@@ -31,12 +31,12 @@
 
 
 ----------------------
-## 3.0版本 Version 3.0 {#ver}
- 
-### 改进界面
+### 改进界面 UI change
 **比原先界面好看一点**  
 
 ----------------------
+
+### 新增功能 Function add
 **Use keyboard:**  
   
 &nbsp;&nbsp;&nbsp;&nbsp;**space: pause/resume;**  
@@ -60,7 +60,7 @@
 
 
 ----------------------
-## 下载 Download {#dow}
+## 下载 Download 
  
 
 **需要有java环境和IDE才能玩 ;D**  
