@@ -4,24 +4,70 @@
 **一个java小项目————贪吃蛇:D**  
   
   
-![Image text](http://oyku9aqxp.bkt.clouddn.com/snake2.gif)    
+================================================================================================  
 
 
-## 玩法 How to play
+<img src = "{{ 'http://oyku9aqxp.bkt.clouddn.com/snake2.gif' | prepend:site.baseurl}} " width="777" />  
+  
+  
+
+<img src = "{{ 'http://oyku9aqxp.bkt.clouddn.com/version3.gif' | prepend:site.baseurl}} " width="777" />
+
+
+## 玩法 How to play {#htp}
+ 
 
 **Use up, down, left, right to controll the snake. Do not eat the rock or yourself!!**  
 
 **用上下左右键控制蛇的走位，不要吃石头或者你自己的身体!!**  
 
-
-## 难度 Difficulty  
+----------------------
+## 难度 Difficulty  {#def}
+  
 
 **After eating food, snakes will move faster and obstacles will increase**  
 
 **随着长度的增加，速度会变快，障碍物也会增多**  
 
-## 后续版本 Unfinished work
 
-**蛇头形状，计分功能，排行榜，死亡之后**  
+----------------------
+## 3.0版本 Version 3.0 {#ver}
+ 
+### 改进界面
+**比原先界面好看一点**  
 
-**Snakehead shape, Scoring function, leaderboard, after-death**  
+----------------------
+**Use keyboard:**  
+  
+&nbsp;&nbsp;&nbsp;&nbsp;**space: pause/resume;**  
+&nbsp;&nbsp;&nbsp;&nbsp;**enter: reborn when you die;**  
+&nbsp;&nbsp;&nbsp;&nbsp;**delete: delete the length of snake**  
+&nbsp;&nbsp;&nbsp;&nbsp;**ins: increase the length of snake**  
+&nbsp;&nbsp;&nbsp;&nbsp;**pageup: speed up; pagedown: speed down;**  
+&nbsp;&nbsp;&nbsp;&nbsp;**1, 2, 3: change the color of snake;**  
+  
+
+**键盘操作**  
+
+&nbsp;&nbsp;&nbsp;&nbsp;**space: 暂停/继续**  
+&nbsp;&nbsp;&nbsp;&nbsp;**enter: 挂掉的时候重生;**  
+&nbsp;&nbsp;&nbsp;&nbsp;**delete: 删减蛇的长度**  
+&nbsp;&nbsp;&nbsp;&nbsp;**ins: 增加蛇的长度(并不能改变得分)**  
+&nbsp;&nbsp;&nbsp;&nbsp;**pageup: 加速; pagedown: 减速;**  
+&nbsp;&nbsp;&nbsp;&nbsp;**1, 2, 3: 改变蛇颜色;**  
+
+
+
+
+----------------------
+## 下载 Download {#dow}
+ 
+
+**需要有java环境和IDE才能玩 ;D**  
+
+**没有C++的exe文件亲民**  
+
+[github地址](https://github.com/CNS1mple/Java-School-Project-Snake)  
+
+[点此下载](https://github.com/CNS1mple/Java-School-Project-Snake/archive/master.zip)
+
