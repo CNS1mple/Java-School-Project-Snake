@@ -14,7 +14,7 @@
 ![title](http://oyku9aqxp.bkt.clouddn.com/version3.gif)    
 
 
-## 玩法 How to play 
+## 玩法 How to play .
  
 
 **Use up, down, left, right to controll the snake. Do not eat the rock or yourself!!**  
@@ -22,7 +22,7 @@
 **用上下左右键控制蛇的走位，不要吃石头或者你自己的身体!!**  
 
 ----------------------
-## 难度 Difficulty  
+## 难度 Difficulty  ..
   
 
 **After eating food, snakes will move faster and obstacles will increase**  
